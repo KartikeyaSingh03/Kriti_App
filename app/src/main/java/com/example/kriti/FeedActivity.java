@@ -72,10 +72,15 @@ public class FeedActivity extends AppCompatActivity {
                 if(!currentuser.isEmpty()){
                     if(dataSnapshot.child("Users").child(currentuser).exists()) {
                         String name = dataSnapshot.child("Users").child(currentuser).child("name").getValue().toString();
-
                        if(!name.isEmpty())
                             NameTF.setText(name);
                        // Toast.makeText(FeedActivity.this,username,Toast.LENGTH_LONG).show();
+                    }
+                    if(dataSnapshot.child("ClubDept").child(currentuser).exists()) {
+                        String name = dataSnapshot.child("ClubDept").child(currentuser).child("name").getValue().toString();
+                        if(!name.isEmpty())
+                            NameTF.setText(name);
+                        // Toast.makeText(FeedActivity.this,username,Toast.LENGTH_LONG).show();
                     }
                 }
             }
