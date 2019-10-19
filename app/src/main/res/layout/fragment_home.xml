@@ -4,36 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:background="@color/cardview_shadow_start_color"
+        tools:context="com.example.android.kriti.HomeFragment">
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Courses"
-                android:layout_gravity="right"
-                android:id="@+id/coursesButton"
+            android:id="@+id/tabs"
+            style="@style/CategoryTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-                />
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reading Material"
-                android:id="@+id/readingMaterial"
+<androidx.viewpager.widget.ViewPager
+    android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-                /></FrameLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

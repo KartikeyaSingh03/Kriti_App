@@ -14,27 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button courses = (Button) findViewById(R.id.coursesButton) ;
-        courses.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intentPost=new Intent(MainActivity.this,CoursesActivity.class);
-                startActivity(intentPost);
 
-            }
-
-        });
-
-        Button material = (Button) findViewById(R.id.readingMaterial) ;
-        material.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intentPost=new Intent(MainActivity.this,ReadingMaterialActivity.class);
-                startActivity(intentPost);
-
-            }
-
-        });
     }
 
 
