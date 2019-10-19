@@ -77,7 +77,6 @@ public  class SignInActivity extends AppCompatActivity {
                             .addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    progressDialog.dismiss();
                                     //if the task is successful
                                     if(task.isSuccessful()){
                                         //start the profile activity
@@ -110,6 +109,7 @@ public  class SignInActivity extends AppCompatActivity {
                                     else{
                                         Toast.makeText(SignInActivity.this,"Incorrect credentials",Toast.LENGTH_LONG).show();
                                     }
+                                    progressDialog.dismiss();
                                 }
                             });
                 }

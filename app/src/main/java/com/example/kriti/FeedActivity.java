@@ -1,13 +1,16 @@
 package com.example.kriti;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -50,7 +53,7 @@ public class FeedActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -89,6 +92,28 @@ public class FeedActivity extends AppCompatActivity {
 
             }
         });
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_gallery:
+                        Intent i = new Intent(FeedActivity.this,ProfilePage.class);
+                        startActivity(i);
+                        break;
+                    case R.id.nav_share:
+                        FirebaseAuth.getInstance().signOut();
+                        finish();
+                        Intent in = new Intent(FeedActivity.this,SignInActivity.class);
+                        startActivity(in);
+                        break;
+                    default:
+                        break;
+                }
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
     }
 
     @Override
@@ -104,4 +129,21 @@ public class FeedActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    /*@Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.nav_gallery:
+                Intent i = new Intent(FeedActivity.this,ProfilePage.class);
+                return true;
+            case R.id.nav_share:
+                FirebaseAuth.getInstance().signOut();
+                return true;
+            case R.id.nav_home:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }*/
+
 }
