@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "924829656507",
+    "firebase_url": "https://kritiapp-2f73b.firebaseio.com",
+    "project_id": "kritiapp-2f73b",
+    "storage_bucket": "kritiapp-2f73b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924829656507:android:2ab01bffdd31ef4ad1d09e",
+        "android_client_info": {
+          "package_name": "com.example.kriti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924829656507-5rcheinksda9m0877m91fumb16iprj3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kriti",
+            "certificate_hash": "139eb6cc7e14f8ed278d3ec749ad5761f27bfb39"
+          }
+        },
+        {
+          "client_id": "924829656507-cjsrunv1jq1tgp7d5682qe3je6ssdjrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSX10LDzJb4JEpwnYDe0WgtufysXVpEOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924829656507-cjsrunv1jq1tgp7d5682qe3je6ssdjrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
