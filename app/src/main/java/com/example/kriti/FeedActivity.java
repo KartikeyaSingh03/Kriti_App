@@ -1,8 +1,11 @@
 package com.example.kriti;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.kriti.ui.gallery.GalleryFragment;
+import com.example.kriti.ui.home.HomeFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -10,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -39,6 +43,7 @@ public class FeedActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     FirebaseDatabase firebaseDatabase;
+    DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +58,7 @@ public class FeedActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -64,6 +69,8 @@ public class FeedActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+       // ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.nav_app_bar_open_drawer_description,R.string.nav)
+
         final TextView NameTF = navigationView.getHeaderView(0).findViewById(R.id.NameTextField);
         firebaseDatabase =FirebaseDatabase.getInstance();
         DatabaseReference root = firebaseDatabase.getReference();
@@ -102,11 +109,28 @@ public class FeedActivity extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case R.id.nav_share:
-                        FirebaseAuth.getInstance().signOut();
-                        finish();
-                        Intent in = new Intent(FeedActivity.this,SignInActivity.class);
-                        startActivity(in);
+                        AlertDialog.Builder alert = new AlertDialog.Builder(FeedActivity.this);
+                        alert.setMessage("Are you sure you want to logout?").setCancelable(false).setPositiveButton("Logout", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseAuth.getInstance().signOut();
+                                finish();
+                                Intent in = new Intent(FeedActivity.this,SignInActivity.class);
+                                startActivity(in);
+                                Toast.makeText(FeedActivity.this,"Logged out Successfully",Toast.LENGTH_LONG).show();
+                            }
+                        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        }).show();
+
                         break;
+                        case R.id.nav_home:
+                            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,new HomeFragment()).commit();
+                            FeedActivity.super.onOptionsItemSelected(item);
+                            break;
                     default:
                         break;
                 }
@@ -129,6 +153,7 @@ public class FeedActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 
     /*@Override
     public boolean onOptionsItemSelected(MenuItem item){
