@@ -43,11 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:id="@+id/registerButton"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Courses"
-                android:id="@+id/course"/>
+            
 
 
 
