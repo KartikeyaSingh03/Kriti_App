@@ -21,7 +21,6 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * to handle interaction events.
- * Use the {@link CoursesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class ClubsFragment extends Fragment {
@@ -48,8 +47,8 @@ public class ClubsFragment extends Fragment {
      * @return A new instance of fragment CoursesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CoursesFragment newInstance(String param1, String param2) {
-        CoursesFragment fragment = new CoursesFragment();
+    public static ClubsFragment newInstance(String param1, String param2) {
+        ClubsFragment fragment = new ClubsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,9 +72,9 @@ public class ClubsFragment extends Fragment {
         final ArrayList<Item> items = new ArrayList<>();
 
 
-        items.add(new Item("Coding Club", " "));
+        items.add(new Item("Coding Club", ""));
 
-        items.add(new Item("Finance Club", " "));
+        items.add(new Item("Finance Club", ""));
 
 
 
@@ -88,9 +87,9 @@ public class ClubsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Item item = items.get(i);
-                Intent intentPost=new Intent(getActivity(),CoursePageActivity.class);
+                Intent intentPost=new Intent(getActivity(),CoursesAndBooks.class);
 
-                CoursePageActivity.pageTitle = item.getHeading();
+                CoursesAndBooks.pageTitle = item.getHeading();
                 startActivity(intentPost);
 
 
