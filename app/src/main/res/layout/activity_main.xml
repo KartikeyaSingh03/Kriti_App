@@ -16,13 +16,13 @@
        android:layout_height="wrap_content"
        android:text="Courses"
        android:id="@+id/coursesButton"
-       android:onClick="Courses"/>
+       />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reading Material"
-            android:id="@+id/readinMaterial"
-            android:onClick="readMaterial"/>
+            android:id="@+id/readingMaterial"
+            />
     </LinearLayout>
 
 
