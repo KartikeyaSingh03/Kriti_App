@@ -48,7 +48,15 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:id="@+id/registerButton"/>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in as Club/Department"
+                android:id="@+id/ClubRegButton"/>
 
         </LinearLayout>
     </LinearLayout>
