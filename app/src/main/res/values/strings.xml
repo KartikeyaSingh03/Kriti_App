@@ -8,11 +8,18 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="courses">COURSES</string>
+    <string name="material">MATERIAL</string>
+    <string name="department">DEPARTMENTS</string>
+    <string name="clubs">CLUBS</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Profile</string>
 
 
     <string name="menu_share">Logout</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -13,11 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.kriti.CoursesActivity;
 import com.example.kriti.MainActivity;
 import com.example.kriti.R;
 import com.example.kriti.ReadingMaterialActivity;
+import com.example.kriti.SimpleFragmentPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class HomeFragment extends Fragment {
 
@@ -29,31 +32,28 @@ public class HomeFragment extends Fragment {
 
 
 
+
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        courses = (Button) root.findViewById(R.id.coursesButton) ;
-        courses.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intentPost=new Intent(getContext(), CoursesActivity.class);
-                startActivity(intentPost);
 
-            }
+        ViewPager viewPager = (ViewPager) root.findViewById(R.id.viewpager);
 
-        });
-         material= (Button) root.findViewById(R.id.readingMaterial) ;
-        material.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intentPost=new Intent(getContext(), ReadingMaterialActivity.class);
-                startActivity(intentPost);
+         SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getActivity(), getFragmentManager());
 
-            }
+        viewPager.setAdapter(adapter);
 
-        });
+        TabLayout tabLayout = (TabLayout) root.findViewById(R.id.tabs);
+
+        tabLayout.setupWithViewPager(viewPager);
+
+
+
+
 
         return root;
     }
