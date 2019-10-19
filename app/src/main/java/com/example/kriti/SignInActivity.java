@@ -27,6 +27,18 @@ public  class SignInActivity extends AppCompatActivity  {
 
         });
 
+        Button courses = (Button) findViewById(R.id.course);
+
+        courses.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intentPost=new Intent(SignInActivity.this,CoursesActivity.class);
+                startActivity(intentPost);
+
+            }
+
+        });
+
     }
 
 //    public void registerButton(View view){

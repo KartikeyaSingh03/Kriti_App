@@ -48,6 +48,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SignInActivity"></meta-data>
         </activity>
+        <activity
+            android:name=".CoursePageActivity"
+            android:label="@string/course_title"
+            android:parentActivityName=".CoursesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CoursesActivity"></meta-data>
+        </activity>
     </application>
 
 
