@@ -7,10 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.kriti.BlankFragment;
-import com.example.kriti.CoursesFragment;
-import com.example.kriti.R;
-
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
  */

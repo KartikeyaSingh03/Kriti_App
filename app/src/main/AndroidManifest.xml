@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".CoursesAndBooks"
+            android:label="@string/title_activity_courses_and_books"
+            android:parentActivityName=".FeedActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.kriti.FeedActivity" />
+        </activity>
+        <activity
             android:name=".FeedActivity"
             android:label="@string/title_activity_feed"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ProfilePage" />
         <activity android:name=".SignInActivity">
             <intent-filter>
