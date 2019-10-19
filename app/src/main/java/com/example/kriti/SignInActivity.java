@@ -54,7 +54,7 @@ public  class SignInActivity extends AppCompatActivity {
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), FeedActivity.class));
         }
 
         signIn.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +96,7 @@ public  class SignInActivity extends AppCompatActivity {
                                                         firebaseAuth.signOut();
                                                     } else {
                                                         finish();
-                                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                                        startActivity(new Intent(getApplicationContext(), FeedActivity.class));
                                                     }
                                                 }
                                             }
@@ -155,7 +155,7 @@ public  class SignInActivity extends AppCompatActivity {
                                                         firebaseAuth.signOut();
                                                     } else {
                                                         finish();
-                                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                                        startActivity(new Intent(getApplicationContext(), FeedActivity.class));
                                                     }
                                                 }
                                             }
