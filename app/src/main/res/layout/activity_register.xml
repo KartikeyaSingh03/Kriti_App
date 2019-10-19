@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:hint="Name"
+        android:id="@+id/NameF"
+        android:layout_marginRight="16dp"/>
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/NameF"
+        android:textSize="20sp"
+        android:hint="Roll no"
+        android:id="@+id/RollF"
+        android:layout_marginRight="16dp"/>
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/RollF"
+        android:textSize="20sp"
+        android:hint="Webmail"
+        android:id="@+id/EmailF"
+        android:layout_marginRight="16dp"/>
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/EmailF"
+        android:textSize="20sp"
+        android:hint="Password"
+        android:id="@+id/PassF"
+        android:layout_marginRight="16dp"/>
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/PassF"
+        android:textSize="20sp"
+        android:hint="Confirm Password"
+        android:id="@+id/confF"
+        android:layout_marginRight="16dp"/>
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confF"
+        android:layout_centerHorizontal="true"
+        android:text="Register"/>
+</RelativeLayout>
