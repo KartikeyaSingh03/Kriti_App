@@ -83,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity  {
                                         Students s = new Students(name,roll);
                                         root.child("Users").child(currentuser).setValue(s);
                                         finish();
-                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), FeedActivity.class));
                                     }else{
                                         //display some message here
                                         Toast.makeText(RegisterActivity.this,"Webmail ID is already registered",Toast.LENGTH_LONG).show();

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfilePage"></activity>
+        <activity
+            android:name=".FeedActivity"
+            android:label="@string/title_activity_feed"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ProfilePage" />
         <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +59,7 @@
             android:parentActivityName=".CoursesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CoursesActivity"></meta-data>
+                android:value=".CoursesActivity" />
         </activity>
     </application>
 
