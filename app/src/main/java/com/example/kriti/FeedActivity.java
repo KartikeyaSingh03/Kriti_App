@@ -53,8 +53,47 @@ public class FeedActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                DatabaseReference root = firebaseDatabase.getReference();
+                final String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                root.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.child("Users").child(currentuser).exists()){
+                            Intent i =new Intent(FeedActivity.this,AddReading.class);
+                            startActivity(i);
+                        }
+                        else if(dataSnapshot.child("ClubDept").child(currentuser).exists()){
+                            AlertDialog.Builder alert = new AlertDialog.Builder(FeedActivity.this);
+                            alert.setMessage("Upload").setCancelable(false).setPositiveButton("New Course", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    finish();
+                                    Intent in = new Intent(FeedActivity.this,AddCourse.class);
+                                    startActivity(in);
+                                }
+                            }).setNegativeButton("Video to Existing Course", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    finish();
+                                    Intent intent =new Intent(FeedActivity.this,AddVideo.class);
+                                    startActivity(intent);
+                                }
+                            }).setNeutralButton("Reading material", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    finish();
+                                    Intent intent =new Intent(FeedActivity.this,AddReading.class);
+                                    startActivity(intent);
+                                }
+                            }).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
         drawer = findViewById(R.id.drawer_layout);

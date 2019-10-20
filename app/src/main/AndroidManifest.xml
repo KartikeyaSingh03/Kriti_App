@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kriti">
-    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AddReading"></activity>
+        <activity android:name=".AddVideo" />
+        <activity android:name=".AddCourse" />
         <activity
             android:name=".CoursesAndBooks"
             android:label="@string/title_activity_courses_and_books"
@@ -23,7 +26,8 @@
             android:name=".FeedActivity"
             android:label="@string/title_activity_feed"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignInActivity"
+        <activity
+            android:name=".SignInActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -88,7 +92,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FeedActivity" />
         </activity>
-
     </application>
 
 </manifest>
