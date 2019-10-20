@@ -128,7 +128,7 @@ public class FeedActivity extends AppCompatActivity {
                         break;
                         case R.id.nav_home:
                             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,new HomeFragment()).commit();
-                            FeedActivity.super.onOptionsItemSelected(item);
+                            //FeedActivity.super.onOptionsItemSelected(item);
                             break;
                     default:
                         break;
