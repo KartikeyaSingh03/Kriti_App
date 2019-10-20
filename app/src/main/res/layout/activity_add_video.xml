@@ -7,17 +7,19 @@
     tools:context=".AddVideo">
 
     <LinearLayout
+        android:layout_margin="7dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/cTitle"
+            android:fontFamily="serif-monospace"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Course Title"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="24sp"/>
         <EditText
             android:id="@+id/cDes"
             android:layout_width="match_parent"
@@ -26,19 +28,12 @@
             android:textSize="20sp"/>
 
         <EditText
-            android:fontFamily="serif-monospace"
-            android:textAllCaps="true"
-            android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the video title here"
             android:id="@+id/video_title"
             android:textSize="20sp"/>
         <EditText
-            android:fontFamily="serif-monospace"
-            android:textAllCaps="true"
-            android:layout_marginTop="7dp"
-            android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the video URL here"
@@ -46,10 +41,14 @@
             android:textSize="20sp"/>
 
         <Button
+            android:theme="@style/AppTheme.Button"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Video"
-            android:id="@+id/add_Video"/>
+            android:id="@+id/add_Video"
+            android:layout_gravity="center_horizontal"
+            />
 
     </LinearLayout>
 
