@@ -57,7 +57,7 @@ public class FeedActivity extends AppCompatActivity {
                 final String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 root.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
                         if(dataSnapshot.child("Users").child(currentuser).exists()){
                             Intent i =new Intent(FeedActivity.this,AddReading.class);
                             startActivity(i);
@@ -76,6 +76,7 @@ public class FeedActivity extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     finish();
                                     Intent intent =new Intent(FeedActivity.this,AddVideo.class);
+                                    intent.putExtra("Title",dataSnapshot.child("ClubDept").child(currentuser).child("name").getValue().toString());
                                     startActivity(intent);
                                 }
                             }).setNeutralButton("Reading material", new DialogInterface.OnClickListener() {

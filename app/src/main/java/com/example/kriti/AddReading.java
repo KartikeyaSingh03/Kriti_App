@@ -111,4 +111,10 @@ public class AddReading extends AppCompatActivity  {
             }
         });
     }
+
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(AddReading.this,FeedActivity.class));
+    }
 }
