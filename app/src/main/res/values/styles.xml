@@ -21,6 +21,11 @@
 
 
     </style>
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">#38006b</item>
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
 
     <style name="TitleBarTextAppearance" parent="android:TextAppearance">
         <item name="android:fontFamily">sans-serif-smallcaps</item>
@@ -41,8 +46,8 @@
 
     <!-- Style for a tab that displays a category name -->
     <style name="CategoryTab" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">@android:color/white</item>
-        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabIndicatorColor">@android:color/darker_gray</item>
+        <item name="tabSelectedTextColor">@android:color/darker_gray</item>
         <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
     </style>
 

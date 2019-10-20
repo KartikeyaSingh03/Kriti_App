@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".SignInActivity">
 
     <ImageView
@@ -34,6 +35,7 @@
 
 
             <EditText
+                android:textSize="24sp"
                 android:background="@drawable/edittextstyle"
                 android:fontFamily="serif-monospace"
                 android:textAllCaps="true"
@@ -44,10 +46,12 @@
                 android:hint=" Email"
                 android:id="@+id/email"/>
             <EditText
+                android:textSize="24sp"
+
                 android:background="@drawable/edittextstyle"
                 android:fontFamily="serif-monospace"
                 android:textAllCaps="true"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="14dp"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,6 +59,8 @@
                 android:id="@+id/password"/>
 
             <Button
+                android:layout_marginTop="7dp"
+                android:theme="@style/AppTheme.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign In"
@@ -64,6 +70,8 @@
                 android:layout_height="wrap_content"
                 android:text="OR"/>
             <Button
+                android:theme="@style/AppTheme.Button"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Register"
@@ -73,6 +81,8 @@
                 android:layout_height="wrap_content"
                 android:text="OR"/>
             <Button
+                android:theme="@style/AppTheme.Button"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign in as Club/Department"

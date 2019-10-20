@@ -89,6 +89,7 @@
         android:layout_marginRight="16dp"
         android:background="@drawable/edittextstyle"/>
     <Button
+        android:theme="@style/AppTheme.Button"
 
         android:id="@+id/reg_btn"
         android:layout_marginTop="16dp"

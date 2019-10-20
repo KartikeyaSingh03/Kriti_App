@@ -58,21 +58,21 @@ public class HomeFragment extends Fragment {
 
         tabLayout.setupWithViewPager(viewPager);
 
-//        View view1 = getLayoutInflater().inflate(R.layout.customtab, null);
-//        view1.findViewById(R.id.icon).setBackgroundResource(R.drawable.dep);
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view1));
+        View view1 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view1.findViewById(R.id.icon).setBackgroundResource(R.drawable.dep);
+        tabLayout.getTabAt(0).setIcon(ICONS[0]).setCustomView(view1);
+
+
+        View view2 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.club);
+        tabLayout.getTabAt(1).setIcon(ICONS[1]).setCustomView(view2);
+
+
+
+
 //
-//
-//        View view2 = getLayoutInflater().inflate(R.layout.customtab, null);
-//        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.club);
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view2));
-
-
-
-
-
-        tabLayout.getTabAt(0).setIcon(ICONS[0]);
-        tabLayout.getTabAt(1).setIcon(ICONS[1]);
+//        tabLayout.getTabAt(0).setIcon(ICONS[0]);
+//        tabLayout.getTabAt(1).setIcon(ICONS[1]);
 
 
         return root;

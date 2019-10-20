@@ -2,9 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright">
+    android:background="@color/colorAccent"
+    >
 
     <TextView
+        android:fontFamily="serif"
+        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -14,6 +17,9 @@
         android:textStyle="bold"
         />
     <TextView
+        android:textColor="@android:color/white"
+
+        android:fontFamily="serif-monospace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

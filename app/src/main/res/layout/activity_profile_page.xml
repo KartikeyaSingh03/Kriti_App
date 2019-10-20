@@ -11,18 +11,37 @@
 
 
     <TextView
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/nameField"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:textSize="20sp"/>
+        android:paddingBottom="7dp"
+        android:textSize="24sp"/>
+
+    <View
+        android:layout_below="@id/nameField"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_above="@id/RollField"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
     <TextView
+        android:fontFamily="serif-monospace"
+        android:paddingTop="7dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/RollField"
         android:layout_below="@id/nameField"
         android:layout_marginLeft="16dp"
-        android:textSize="20sp"/>
+        android:textSize="24sp"/>
 
 </RelativeLayout>

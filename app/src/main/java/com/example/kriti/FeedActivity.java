@@ -121,13 +121,13 @@ public class FeedActivity extends AppCompatActivity {
                     if(dataSnapshot.child("Users").child(currentuser).exists()) {
                         String name = dataSnapshot.child("Users").child(currentuser).child("name").getValue().toString();
                        if(!name.isEmpty())
-                            NameTF.setText(name);
+                            NameTF.setText("Welcome, "+ name + "!");
                        // Toast.makeText(FeedActivity.this,username,Toast.LENGTH_LONG).show();
                     }
                     if(dataSnapshot.child("ClubDept").child(currentuser).exists()) {
                         String name = dataSnapshot.child("ClubDept").child(currentuser).child("name").getValue().toString();
                         if(!name.isEmpty())
-                            NameTF.setText(name);
+                            NameTF.setText("Welcome, admin of "+name+"!");
                         // Toast.makeText(FeedActivity.this,username,Toast.LENGTH_LONG).show();
                     }
                 }
@@ -177,13 +177,6 @@ public class FeedActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.feed, menu);
-        return true;
     }
 
     @Override
