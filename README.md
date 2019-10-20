@@ -23,6 +23,11 @@ Any type of user can view all of the videos and pdfs uploaded, also they can add
 General users cannot upload a video to a course or create a new course. Only Clubs and Departments can do that.
 
 
+# Setup instructions
+
+
+
+
 # Overview of Learn.IITG
 
 After logging in, a 'Home' fragment is displayed which is a part of the Navigation Drawer. This fragment diaplays the departments and clubs using tab layout, each tab implementing a recycler view. Only 2 departments and 2 clubs have been displayed for prototyping purposes. More can be added by tweaking the database.
