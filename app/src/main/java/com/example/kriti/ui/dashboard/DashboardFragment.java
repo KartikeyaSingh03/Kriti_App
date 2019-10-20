@@ -27,6 +27,8 @@ public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
 
+    private String deptOrClub;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -36,9 +38,11 @@ public class DashboardFragment extends Fragment {
         final View root = inflater.inflate(R.layout.activity_courses, container, false);
         final ArrayList<Item> items = new ArrayList<>();
 
+        deptOrClub=CoursesAndBooks.pageTitle;
+
         for(int i = 0; i < 9 ; ++i){
 
-            items.add(new Item("Course Title " +i,"Course Description " ));
+            items.add(new Item(deptOrClub+" Course Title " +i,deptOrClub+" Course Description " ));
         }
         ItemAdapter adapter = new ItemAdapter(getActivity(), items);
         ListView listView = (ListView) root.findViewById(R.id.list);

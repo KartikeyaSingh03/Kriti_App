@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.kriti.BookPageActivity;
 import com.example.kriti.CoursePageActivity;
+import com.example.kriti.CoursesAndBooks;
 import com.example.kriti.Item;
 import com.example.kriti.ItemAdapter;
 import com.example.kriti.R;
@@ -27,6 +28,8 @@ public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
 
+    private String deptOrClub;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
@@ -34,9 +37,11 @@ public class NotificationsFragment extends Fragment {
         View root = inflater.inflate(R.layout.activity_courses, container, false);
         final ArrayList<Item> items = new ArrayList<>();
 
+        deptOrClub= CoursesAndBooks.pageTitle;
+
         for(int i = 0; i < 9 ; ++i){
 
-            items.add(new Item("Book Title " +i,"Book Description " ));
+            items.add(new Item(deptOrClub+" Book Title " +i,deptOrClub+" Book Description " ));
         }
         ItemAdapter adapter = new ItemAdapter(getActivity(), items);
         ListView listView = (ListView) root.findViewById(R.id.list);
