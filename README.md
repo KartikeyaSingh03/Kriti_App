@@ -10,7 +10,9 @@ Firebase - https://firebase.google.com/
 
 After opening the app for the first time, user is directed to the Sign In or Register Page.
  
-There are two types of users: 1) General Users
+There are two types of users: 
+
+                              1) General User
 
                               2) Clubs and Departments
                              
