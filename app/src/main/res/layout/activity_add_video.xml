@@ -34,22 +34,13 @@
             android:hint="Enter the video title here"
             android:id="@+id/video_title"
             android:textSize="20sp"/>
-        <EditText
-            android:fontFamily="serif-monospace"
-            android:textAllCaps="true"
-            android:layout_marginTop="7dp"
-            android:background="@drawable/edittextstyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter the video URL here"
-            android:id="@+id/video_url"
-            android:textSize="20sp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Video"
-            android:id="@+id/add_Video"/>
+            android:text="Browse"
+            android:id="@+id/Browse"/>
+
 
     </LinearLayout>
 

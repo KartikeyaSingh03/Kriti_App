@@ -30,7 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class DashboardFragment extends Fragment {
-
+    String course;
     private DashboardViewModel dashboardViewModel;
     FirebaseDatabase database;
     private String deptOrClub;
@@ -51,6 +51,8 @@ public class DashboardFragment extends Fragment {
         rootDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int c=0;
+
                 if(dataSnapshot.child(deptOrClub).exists()){
                     for(DataSnapshot snapshot : dataSnapshot.child(deptOrClub).child("courses").getChildren()){
 
@@ -61,7 +63,11 @@ public class DashboardFragment extends Fragment {
                             courseOver = snapshot.child("OverView").child("OverView").getValue().toString();
                         }
                         items.add(new Item(courseName,courseOver));
+                        if(c==0){
+                            course = dataSnapshot.child(deptOrClub).child("courses").getKey();
+                        }
 
+                        c++;
                     }
                     adapter = new ItemAdapter(getActivity(), items);
                     listView = (ListView) root.findViewById(R.id.list);
@@ -71,7 +77,7 @@ public class DashboardFragment extends Fragment {
                         public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
                             Item item = items.get(i);
                             Intent intentPost=new Intent(getActivity(), CoursePageActivity.class);
-
+                            intentPost.putExtra("Course",course);
                             CoursePageActivity.pageTitle = item.getHeading();
                             startActivity(intentPost);
 
