@@ -27,6 +27,9 @@ General users cannot upload a video to a course or create a new course. Only Clu
 
 1) Clone or download this repository.
 
+2) This app runs off a Firebase backend. You will need to generate your firebase backend. To do this, navigate to           https://firebase.google.com/ and sign up. Create a new project on Firebase.
+
+3) 
 
 
 
