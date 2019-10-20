@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kriti">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -21,7 +23,6 @@
             android:name=".FeedActivity"
             android:label="@string/title_activity_feed"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ProfilePage" />
         <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,6 +70,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CoursesActivity" />
         </activity>
+        <activity
+            android:name=".BookPageActivity"
+            android:label="@string/course_title"
+            android:parentActivityName=".CoursesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CoursesActivity" />
+        </activity>
+        <activity
+            android:name=".ProfilePage"
+            android:label="Profile"
+            android:parentActivityName=".FeedActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FeedActivity" />
+        </activity>
+
     </application>
 
 </manifest>

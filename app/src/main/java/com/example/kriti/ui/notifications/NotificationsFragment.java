@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.kriti.BookPageActivity;
 import com.example.kriti.CoursePageActivity;
 import com.example.kriti.Item;
 import com.example.kriti.ItemAdapter;
@@ -44,9 +45,9 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Item item = items.get(i);
-                Intent intentPost=new Intent(getActivity(), CoursePageActivity.class);
+                Intent intentPost=new Intent(getActivity(), BookPageActivity.class);
 
-                CoursePageActivity.pageTitle = item.getHeading();
+                BookPageActivity.pageTitle = item.getHeading();
                 startActivity(intentPost);
 
 
