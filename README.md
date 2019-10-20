@@ -18,7 +18,11 @@ There are two types of users:
                              
 Any general user can register themselves and their data and credentials would be saved in the databse.
 But Clubs and Departments cannot register. Their are pre - registered by the Admin who provides them with their login credentials.
-
+4 sample admin accounts are created wuth credentials :-
+1) Email - cse@iitg.ac.in , Password - cse12345
+2) Email - eee@iitg.ac.in , Password - eee12345
+3) Email - coding@iitg.ac.in , Password - coding12345
+4) Email - coding@iitg.ac.in , Password - coding12345
 Any type of user can view all of the videos and pdfs uploaded, also they can add a new Book, Slides, Reading Material (All in PDF format).
 General users cannot upload a video to a course or create a new course. Only Clubs and Departments can do that.
 
@@ -27,9 +31,9 @@ General users cannot upload a video to a course or create a new course. Only Clu
 
 1) Clone or download this repository.
 
-2) This app runs off a Firebase backend. You will need to generate your firebase backend. To do this, navigate to           https://firebase.google.com/ and sign up. Create a new project on Firebase.
+2) Create a new User profile or login if the account already exists. Note that a normal user is not allowed to register as a Club/Department. 
 
-3) 
+3) After logging in you can navigate to various Clubs/Departments to view Courses and Reading Material.  
 
 
 
@@ -42,4 +46,6 @@ Clicking on any of the department or clubs redirects to another fragment which i
 
 The Navigation Drawer has one fragment for displaying the profile, and the other for logout which pops an alert dialog box.
 
+# Bugs
 
+The video upload option and video playlist is not functional right now but the pdf can be uploaded and Viwed.   
