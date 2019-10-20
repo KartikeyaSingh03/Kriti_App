@@ -5,5 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddCourse">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the course title here"
+        android:id="@+id/course_title"
+        ></EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the course description here"
+            android:id="@+id/course_description"
+            ></EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a video to the course"
+            android:id="@+id/addVideo"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

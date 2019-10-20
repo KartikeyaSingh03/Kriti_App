@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".AddVideo">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Title"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/cDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Description" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the video title here"
+            android:id="@+id/video_title"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the video URL here"
+            android:id="@+id/video_url"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Video"
+            android:id="@+id/add_Video"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

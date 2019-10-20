@@ -11,9 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddReading"></activity>
-        <activity android:name=".AddVideo" />
-        <activity android:name=".AddCourse" />
+        <activity
+            android:name=".AddReading"
+            android:label="Add a PDF">
+
+        </activity>
+        <activity
+            android:name=".AddCourse"
+            android:label="Add a Course"
+        >
+        </activity>
+        <activity
+            android:name=".AddVideo"
+            android:label="Add a Video"
+           >
+        </activity>
         <activity
             android:name=".CoursesAndBooks"
             android:label="@string/title_activity_courses_and_books"
