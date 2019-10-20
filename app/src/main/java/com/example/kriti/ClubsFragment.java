@@ -72,13 +72,9 @@ public class ClubsFragment extends Fragment {
         final ArrayList<Item> items = new ArrayList<>();
 
 
-        items.add(new Item("Coding Club", ""));
+        items.add(new Item("Coding", ""));
 
-        items.add(new Item("Finance Club", ""));
-
-
-
-
+        items.add(new Item("Finance", ""));
 
         ItemAdapter adapter = new ItemAdapter(getActivity(), items);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
