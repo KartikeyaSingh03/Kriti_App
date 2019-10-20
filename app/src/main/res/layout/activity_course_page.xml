@@ -5,48 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnonce"
-            android:text="Once"/>
-
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnplay"
-            android:text="play"/>
-
-    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/holo_blue_bright"
+
+            android:layout_margin="14dp">
 
         <ImageButton
             android:id="@+id/play"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
-            android:background="@android:color/white"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+
             app:srcCompat="@drawable/ic_play_circle_filled_black_24dp"
             android:visibility="visible"
-            android:layout_margin="14dp"/>
+         />
+        </FrameLayout>
         <VideoView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
             android:layout_margin="14dp"
-            android:id="@+id/vv"/>
+            android:id="@+id/vv"
+            android:visibility="gone"
+            />
         <ProgressBar
             android:layout_width="50dp"
             android:layout_height="50dp"

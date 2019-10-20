@@ -3,6 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_background"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
     <EditText
         android:inputType="text"
         android:layout_width="match_parent"
@@ -62,4 +73,5 @@
         android:layout_below="@id/confF"
         android:layout_centerHorizontal="true"
         android:text="Register"/>
+    </RelativeLayout>
 </RelativeLayout>

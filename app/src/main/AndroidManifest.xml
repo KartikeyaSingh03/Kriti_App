@@ -23,7 +23,8 @@
             android:name=".FeedActivity"
             android:label="@string/title_activity_feed"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignInActivity">
+        <activity android:name=".SignInActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,7 +58,8 @@
         <activity
             android:name=".RegisterActivity"
             android:label="Sign Up "
-            android:parentActivityName=".SignInActivity">
+            android:parentActivityName=".SignInActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SignInActivity" />
