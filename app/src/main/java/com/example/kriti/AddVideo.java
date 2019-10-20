@@ -54,7 +54,7 @@ public class AddVideo extends AppCompatActivity {
         ctitle.setText(ClubName);
         cdes = findViewById(R.id.cDes);
         vidTitle = findViewById(R.id.video_title);
-        Browse =findViewById(R.id.Browse);
+        Browse =findViewById(R.id.add_Video);
 
         Browse.setOnClickListener(new View.OnClickListener() {
             @Override
