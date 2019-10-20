@@ -25,6 +25,9 @@ General users cannot upload a video to a course or create a new course. Only Clu
 
 # Setup instructions
 
+1) Clone or download this repository.
+
+
 
 
 
