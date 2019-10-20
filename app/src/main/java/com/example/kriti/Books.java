@@ -1,13 +1,15 @@
 package com.example.kriti;
 
+import android.net.Uri;
+
+import java.net.URL;
+
 public class Books {
-    String bookName;
+
     String bookOverview;
     String url;
 
-    public String getBookName() {
-        return bookName;
-    }
+
 
     public String getBookOverview() {
         return bookOverview;
@@ -17,8 +19,8 @@ public class Books {
         return url;
     }
 
-    public Books(String bookName, String bookOverview, String url) {
-        this.bookName = bookName;
+    public Books( String bookOverview, String url) {
+
         this.bookOverview = bookOverview;
         this.url = url;
     }

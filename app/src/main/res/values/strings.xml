@@ -25,5 +25,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Courses</string>
     <string name="title_notifications">Books and Reading Material</string>
-
+    <string-array name="Departments">
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>Coding</item>
+        <item>Finance</item>
+    </string-array>
 </resources>
