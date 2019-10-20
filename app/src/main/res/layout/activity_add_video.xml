@@ -24,11 +24,18 @@
             android:text="Course Description" />
 
         <EditText
+            android:fontFamily="serif-monospace"
+            android:textAllCaps="true"
+            android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the video title here"
             android:id="@+id/video_title"/>
         <EditText
+            android:fontFamily="serif-monospace"
+            android:textAllCaps="true"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the video URL here"

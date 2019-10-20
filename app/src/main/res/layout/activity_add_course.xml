@@ -11,12 +11,20 @@
         android:orientation="vertical">
 
     <EditText
+
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="true"
+        android:background="@drawable/edittextstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the course title here"
         android:id="@+id/course_title"
         ></EditText>
         <EditText
+            android:layout_marginTop="7dp"
+            android:fontFamily="serif-monospace"
+            android:textAllCaps="true"
+            android:background="@drawable/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the course description here"

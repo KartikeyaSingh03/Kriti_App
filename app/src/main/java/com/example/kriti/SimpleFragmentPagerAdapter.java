@@ -32,11 +32,11 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         return 2;
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        if (position == 0) {
-            return mContext.getString(R.string.department);
-        } else
-            return mContext.getString(R.string.clubs);
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        if (position == 0) {
+//            return mContext.getString(R.string.department);
+//        } else
+//            return mContext.getString(R.string.clubs);
 
-}}
+}

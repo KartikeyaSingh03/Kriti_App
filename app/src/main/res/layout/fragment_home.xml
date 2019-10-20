@@ -13,7 +13,8 @@
         tools:context="com.example.android.kriti.HomeFragment">
 
         <com.google.android.material.tabs.TabLayout
-
+            app:tabMode="fixed"
+            app:tabGravity="fill"
             android:id="@+id/tabs"
             style="@style/CategoryTab"
             android:layout_width="match_parent"
