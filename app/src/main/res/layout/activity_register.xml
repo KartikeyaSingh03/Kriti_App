@@ -15,63 +15,88 @@
         android:layout_alignParentBottom="true">
 
     <EditText
+
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="true"
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:textSize="20sp"
-        android:hint="Name"
+        android:hint=" Name"
         android:id="@+id/NameF"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittextstyle"/>
     <EditText
+
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="true"
+        android:layout_marginTop="7dp"
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_below="@id/NameF"
         android:textSize="20sp"
-        android:hint="Roll no"
+        android:hint=" Roll no"
         android:id="@+id/RollF"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittextstyle"/>
     <EditText
+
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="true"
+        android:layout_marginTop="7dp"
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_below="@id/RollF"
         android:textSize="20sp"
-        android:hint="Webmail"
+        android:hint=" Webmail"
         android:id="@+id/EmailF"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittextstyle"/>
 
     <EditText
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="true"
+        android:layout_marginTop="7dp"
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_below="@id/EmailF"
         android:textSize="20sp"
-        android:hint="Password"
+        android:hint=" Password"
         android:id="@+id/PassF"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittextstyle"/>
     <EditText
+
+        android:fontFamily="serif-monospace"
+        android:textAllCaps="true"
+        android:layout_marginTop="7dp"
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_below="@id/PassF"
         android:textSize="20sp"
-        android:hint="Confirm Password"
+        android:hint=" Enter Password Again"
         android:id="@+id/confF"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittextstyle"/>
     <Button
+
         android:id="@+id/reg_btn"
         android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/confF"
         android:layout_centerHorizontal="true"
-        android:text="Register"/>
+        android:text="Register"
+        />
     </RelativeLayout>
 </RelativeLayout>

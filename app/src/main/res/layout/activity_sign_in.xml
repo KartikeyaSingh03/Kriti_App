@@ -9,7 +9,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:adjustViewBounds="false"
         android:baselineAlignBottom="true"
         android:src="@drawable/home_background"
@@ -35,16 +34,24 @@
 
 
             <EditText
+                android:background="@drawable/edittextstyle"
+                android:fontFamily="serif-monospace"
+                android:textAllCaps="true"
+                android:layout_marginTop="7dp"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint=" Email"
                 android:id="@+id/email"/>
             <EditText
+                android:background="@drawable/edittextstyle"
+                android:fontFamily="serif-monospace"
+                android:textAllCaps="true"
+                android:layout_marginTop="7dp"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint=" Password"
                 android:id="@+id/password"/>
 
             <Button
