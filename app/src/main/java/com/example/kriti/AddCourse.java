@@ -44,7 +44,7 @@ public class AddCourse extends AppCompatActivity {
                         String club = dataSnapshot.child("ClubDept").child(current).child("name").getValue().toString();
                         root.child(club).child("courses").child(title).child("OverView").child("OverView").setValue(description);
                         Intent i = new Intent(AddCourse.this,AddVideo.class);
-                        i.putExtra("Title",title);
+                        i.putExtra("Title",club);
                         startActivity(i);
                     }
 

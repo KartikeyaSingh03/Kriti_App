@@ -16,23 +16,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Course Title"
-            android:textStyle="bold"/>
-        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <EditText
             android:id="@+id/cDes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Course Description" />
+            android:hint="Course Name"
+            android:textSize="20sp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the video title here"
-            android:id="@+id/video_title"/>
+            android:id="@+id/video_title"
+            android:textSize="20sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter the video URL here"
-            android:id="@+id/video_url"/>
+            android:id="@+id/video_url"
+            android:textSize="20sp"/>
 
         <Button
             android:layout_width="wrap_content"

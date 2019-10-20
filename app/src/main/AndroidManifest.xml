@@ -3,7 +3,8 @@
     package="com.example.kriti">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,21 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PDFViewer"></activity>
         <activity
             android:name=".AddReading"
-            android:label="Add a PDF">
-
-        </activity>
+            android:label="Add a PDF"></activity>
         <activity
             android:name=".AddCourse"
-            android:label="Add a Course"
-        >
-        </activity>
+            android:label="Add a Course"></activity>
         <activity
             android:name=".AddVideo"
-            android:label="Add a Video"
-           >
-        </activity>
+            android:label="Add a Video"></activity>
         <activity
             android:name=".CoursesAndBooks"
             android:label="@string/title_activity_courses_and_books"

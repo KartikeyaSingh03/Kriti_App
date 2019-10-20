@@ -20,7 +20,13 @@ import com.example.kriti.CoursePageActivity;
 import com.example.kriti.CoursesAndBooks;
 import com.example.kriti.Item;
 import com.example.kriti.ItemAdapter;
+import com.example.kriti.PDFViewer;
 import com.example.kriti.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -28,33 +34,56 @@ public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
 
+    FirebaseDatabase database;
     private String deptOrClub;
+    String courseName,courseOver;
+    ListView listView;
+    ItemAdapter adapter;
+    ArrayList<Item> items=new ArrayList<>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
                 ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.activity_courses, container, false);
+        final View root = inflater.inflate(R.layout.activity_courses, container, false);
         final ArrayList<Item> items = new ArrayList<>();
-
-        deptOrClub= CoursesAndBooks.pageTitle;
-
-        for(int i = 0; i < 9 ; ++i){
-
-            items.add(new Item(deptOrClub+" Book Title " +i,deptOrClub+" Book Description " ));
-        }
-        ItemAdapter adapter = new ItemAdapter(getActivity(), items);
-        ListView listView = (ListView) root.findViewById(R.id.list);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        deptOrClub=CoursesAndBooks.pageTitle;
+        database = FirebaseDatabase.getInstance();
+        DatabaseReference rootDatabase =database.getReference();
+        rootDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Item item = items.get(i);
-                Intent intentPost=new Intent(getActivity(), BookPageActivity.class);
+            public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
+                if(dataSnapshot.child(deptOrClub).exists()){
+                    for(DataSnapshot snapshot : dataSnapshot.child(deptOrClub).child("Reading").getChildren()){
 
-                BookPageActivity.pageTitle = item.getHeading();
-                startActivity(intentPost);
+                        if(snapshot.exists()) {
+                            courseName = snapshot.getKey();
+                        }
+                        if(snapshot.child("bookOverView").exists()) {
+                            courseOver = snapshot.child("bookOverView").getValue().toString();
+                        }
+                        items.add(new Item(courseName,courseOver));
 
+                    }
+                    adapter = new ItemAdapter(getActivity(), items);
+                    listView = (ListView) root.findViewById(R.id.list);
+                    listView.setAdapter(adapter);
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
+                            Item item = items.get(i);
+                            Intent intentPost=new Intent(getActivity(), PDFViewer.class);
+                            intentPost.putExtra("URL",dataSnapshot.child(deptOrClub).child("Reading").child(item.getHeading()).child("url").getValue().toString());
+                            startActivity(intentPost);
+
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
