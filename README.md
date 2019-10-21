@@ -22,7 +22,7 @@ But Clubs and Departments cannot register. Their are pre - registered by the Adm
 1) Email - cse@iitg.ac.in , Password - cse12345
 2) Email - eee@iitg.ac.in , Password - eee12345
 3) Email - coding@iitg.ac.in , Password - coding12345
-4) Email - coding@iitg.ac.in , Password - coding12345
+4) Email - finance@iitg.ac.in , Password - finance12345
 Any type of user can view all of the videos and pdfs uploaded, also they can add a new Book, Slides, Reading Material (All in PDF format).
 General users cannot upload a video to a course or create a new course. Only Clubs and Departments can do that.
 
